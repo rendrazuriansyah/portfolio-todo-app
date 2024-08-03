@@ -6,9 +6,20 @@ interface TodoItemProps {
 }
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete }) => (
-	<div>
-		<span>{todo}</span>
-		<button onClick={onDelete}>Delete</button>
+	<div className="box">
+		<div className="columns is-vcentered">
+			<div className="column">
+				<span>{todo}</span>
+			</div>
+			<div className="column is-narrow">
+				<button
+					onClick={onDelete}
+					className="button is-danger is-light"
+				>
+					Delete
+				</button>
+			</div>
+		</div>
 	</div>
 );
 

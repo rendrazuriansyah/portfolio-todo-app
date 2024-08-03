@@ -14,13 +14,15 @@ const App: React.FC = () => {
 	};
 
 	return (
-		<div>
-			<h1>My Todo List</h1>
-			<AddTodo onAdd={addTodo} />
-			<TodoList
-				todos={todos}
-				onDelete={deleteTodo}
-			/>
+		<div className="container mt-5">
+			<h1 className="title">My Todo List</h1>
+			<div className="box">
+				<AddTodo onAdd={addTodo} />
+				<TodoList
+					todos={todos}
+					onDelete={deleteTodo}
+				/>
+			</div>
 		</div>
 	);
 };

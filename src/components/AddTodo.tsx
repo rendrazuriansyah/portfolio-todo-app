@@ -1,4 +1,3 @@
-// src/components/AddTodo.tsx
 import React, { useState } from "react";
 
 interface AddTodoProps {
@@ -17,14 +16,27 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAdd }) => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<input
-				type="text"
-				value={input}
-				onChange={(e) => setInput(e.target.value)}
-				placeholder="Add new todo"
-			/>
-			<button type="submit">Add</button>
+		<form
+			onSubmit={handleSubmit}
+			className="field"
+		>
+			<div className="control">
+				<input
+					type="text"
+					className="input"
+					value={input}
+					onChange={(e) => setInput(e.target.value)}
+					placeholder="Add new todo"
+				/>
+			</div>
+			<div className="control">
+				<button
+					type="submit"
+					className="button is-primary mt-2"
+				>
+					Add
+				</button>
+			</div>
 		</form>
 	);
 };

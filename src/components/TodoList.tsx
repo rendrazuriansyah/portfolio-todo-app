@@ -17,7 +17,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos, onDelete }) => (
 				/>
 			))
 		) : (
-			<p className="has-text-centered">No todos yet!</p>
+			<p className="has-text-centered">No todos available</p>
 		)}
 	</div>
 );

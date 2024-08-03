@@ -20,24 +20,21 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAdd }) => {
 			onSubmit={handleSubmit}
 			className="field"
 		>
-			<div className="control has-icons-left">
+			<div className="control">
 				<input
 					type="text"
-					className="input is-large"
+					className="input is-medium"
 					value={input}
 					onChange={(e) => setInput(e.target.value)}
 					placeholder="Add new todo"
 				/>
-				<span className="icon is-left">
-					<i className="fas fa-plus"></i>
-				</span>
 			</div>
 			<div className="control mt-2">
 				<button
 					type="submit"
 					className="button is-primary is-fullwidth"
 				>
-					Add
+					Add Todo
 				</button>
 			</div>
 		</form>

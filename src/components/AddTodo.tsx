@@ -6,12 +6,15 @@ interface AddTodoProps {
 
 const AddTodo: React.FC<AddTodoProps> = ({ onAdd }) => {
 	const [input, setInput] = useState("");
+	const [message, setMessage] = useState<string | null>(null);
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 		if (input.trim()) {
 			onAdd(input.trim());
 			setInput("");
+			setMessage("Todo added successfully!");
+			setTimeout(() => setMessage(null), 3000); // Clear message after 3 seconds
 		}
 	};
 
@@ -29,6 +32,9 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAdd }) => {
 					placeholder="Add new todo"
 				/>
 			</div>
+			{message && (
+				<div className="notification is-success mt-2">{message}</div>
+			)}
 			<div className="control mt-2">
 				<button
 					type="submit"

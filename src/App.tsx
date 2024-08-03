@@ -15,13 +15,19 @@ const App: React.FC = () => {
 
 	return (
 		<div className="container mt-5">
-			<h1 className="title has-text-centered">My Todo List</h1>
-			<div className="box">
-				<AddTodo onAdd={addTodo} />
-				<TodoList
-					todos={todos}
-					onDelete={deleteTodo}
-				/>
+			<div className="columns is-centered">
+				<div className="column is-12-mobile is-8-tablet is-6-desktop">
+					<h1 className="title has-text-centered has-text-weight-bold has-text-primary">
+						My Todo List
+					</h1>
+					<div className="box">
+						<AddTodo onAdd={addTodo} />
+						<TodoList
+							todos={todos}
+							onDelete={deleteTodo}
+						/>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

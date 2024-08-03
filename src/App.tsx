@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
 	return (
 		<div className="container mt-5">
-			<h1 className="title">My Todo List</h1>
+			<h1 className="title has-text-centered">My Todo List</h1>
 			<div className="box">
 				<AddTodo onAdd={addTodo} />
 				<TodoList

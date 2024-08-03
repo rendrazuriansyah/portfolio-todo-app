@@ -9,12 +9,12 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete }) => (
 	<div className="box">
 		<div className="columns is-vcentered">
 			<div className="column">
-				<span>{todo}</span>
+				<span className="is-size-5">{todo}</span>
 			</div>
 			<div className="column is-narrow">
 				<button
 					onClick={onDelete}
-					className="button is-danger is-light"
+					className="button is-danger is-outlined"
 				>
 					Delete
 				</button>

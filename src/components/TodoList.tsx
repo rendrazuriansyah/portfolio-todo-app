@@ -8,13 +8,17 @@ interface TodoListProps {
 
 const TodoList: React.FC<TodoListProps> = ({ todos, onDelete }) => (
 	<div>
-		{todos.map((todo, index) => (
-			<TodoItem
-				key={index}
-				todo={todo}
-				onDelete={() => onDelete(index)}
-			/>
-		))}
+		{todos.length ? (
+			todos.map((todo, index) => (
+				<TodoItem
+					key={index}
+					todo={todo}
+					onDelete={() => onDelete(index)}
+				/>
+			))
+		) : (
+			<p className="has-text-centered">No todos yet!</p>
+		)}
 	</div>
 );
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./AddTodo.module.css"; // Impor CSS Module
 
 interface AddTodoProps {
 	onAdd: (todo: string) => void;
@@ -6,15 +7,12 @@ interface AddTodoProps {
 
 const AddTodo: React.FC<AddTodoProps> = ({ onAdd }) => {
 	const [input, setInput] = useState("");
-	const [message, setMessage] = useState<string | null>(null);
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 		if (input.trim()) {
 			onAdd(input.trim());
-			setInput("");
-			setMessage("Todo added successfully!");
-			setTimeout(() => setMessage(null), 3000); // Clear message after 3 seconds
+			setInput(""); // Reset input field after adding todo
 		}
 	};
 
@@ -23,22 +21,19 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAdd }) => {
 			onSubmit={handleSubmit}
 			className="field"
 		>
-			<div className="control">
+			<div className={`control ${styles.input}`}>
 				<input
 					type="text"
-					className="input is-medium"
+					className={`input is-medium ${styles.input}`}
 					value={input}
 					onChange={(e) => setInput(e.target.value)}
 					placeholder="Add new todo"
 				/>
 			</div>
-			{message && (
-				<div className="notification is-success mt-2">{message}</div>
-			)}
-			<div className="control mt-2">
+			<div className="control">
 				<button
 					type="submit"
-					className="button is-primary is-fullwidth"
+					className={`button is-primary is-fullwidth ${styles.button}`}
 				>
 					Add Todo
 				</button>

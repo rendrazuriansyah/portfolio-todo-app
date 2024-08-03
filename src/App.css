@@ -1,0 +1,60 @@
+/* Reset margin dan padding untuk semua elemen */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Atur padding dan margin untuk elemen kontainer utama */
+.container {
+	margin: 0 auto;
+	padding: 0.75rem; /* Padding kontainer */
+}
+
+/* Atur padding dan margin untuk elemen form */
+.field,
+.control {
+	margin: 0.25rem 0; /* Jarak antar elemen form */
+	padding: 0.25rem;
+}
+
+/* Padding dan margin untuk tombol */
+.button {
+	margin: 0.25rem 0; /* Jarak antar tombol */
+	padding: 0.5rem 0.75rem; /* Padding tombol */
+	border-radius: 4px; /* Menambahkan border radius untuk tombol */
+}
+
+/* Margin dan padding untuk notifikasi */
+.notification {
+	margin: 0.25rem 0; /* Jarak antar notifikasi */
+	padding: 0.5rem;
+	border-radius: 4px; /* Menambahkan border radius untuk notifikasi */
+}
+
+/* Margin dan padding untuk input */
+.input {
+	margin-bottom: 0.25rem; /* Jarak bawah input */
+	padding: 0.25rem;
+	border-radius: 4px; /* Menambahkan border radius untuk input */
+}
+
+/* Margin untuk judul */
+.title {
+	margin-bottom: 0.75rem; /* Jarak bawah judul */
+}
+
+/* Flex container untuk penataan elemen */
+.is-flex {
+	display: flex;
+}
+
+.is-justify-content-space-between {
+	justify-content: space-between;
+}
+
+.is-align-items-center {
+	align-items: center;
+}

@@ -6,14 +6,16 @@ interface TodoItemProps {
 }
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete }) => (
-	<div className="notification is-dark">
+	<div className="notification is-light">
 		<div className="is-flex is-justify-content-space-between is-align-items-center">
-			<span>{todo}</span>
+			<span className="has-text-dark">{todo}</span>
 			<button
 				onClick={onDelete}
-				className="delete is-small"
+				className="button is-small is-danger"
 				aria-label="Delete Todo"
-			></button>
+			>
+				<i className="fas fa-trash-alt"></i> {/* Ikon hapus */}
+			</button>
 		</div>
 	</div>
 );

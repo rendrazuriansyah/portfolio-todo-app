@@ -1,0 +1,20 @@
+.input {
+	transition: border-color 0.3s;
+	padding: 0.75rem; /* Sesuaikan padding input */
+	margin-bottom: 0.5rem; /* Sesuaikan margin bawah */
+}
+
+.input:focus {
+	border-color: #3273dc;
+}
+
+.button {
+	transition: background-color 0.3s, color 0.3s;
+	padding: 0.75rem 1.5rem; /* Sesuaikan padding tombol */
+	margin: 0.5rem 0; /* Sesuaikan margin tombol */
+}
+
+.button:hover {
+	background-color: #3273dc;
+	color: white;
+}
